@@ -5,9 +5,23 @@ body {
 }
 
 img#brand-logo {
-  width: 92px;
+  width: 38px;
+  margin-left: 15px;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 600;
 }
 
 .nav-icon {
   margin-right: 8px;
+}
+
+.nav-icon-feather {
+  margin: 0 4px 2px 0;
+
+  width: 16px;
+  height: 16px;
+  vertical-align: text-bottom;
 }
