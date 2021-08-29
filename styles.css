@@ -9,9 +9,9 @@ img#brand-logo {
   margin-left: 15px;
 }
 
+.dropdown-item,
 .nav-link {
   font-size: 0.875rem;
-  font-weight: 600;
 }
 
 .nav-icon {
@@ -20,8 +20,40 @@ img#brand-logo {
 
 .nav-icon-feather {
   margin: 0 4px 2px 0;
-
   width: 16px;
   height: 16px;
   vertical-align: text-bottom;
+}
+
+.navbar-nav {
+  flex-direction: row !important;
+}
+
+.navbar-nav .form-inline {
+  width: 100%;
+}
+
+.navbar .form-control {
+  border-radius: 0;
+  font-size: 0.875rem;
+  height: calc(1.5em + .75rem);
+  width: 100%;
+  background-color: rgba(255, 255, 255, .1);
+  border-color: rgba(255, 255, 255, .1);
+  transition: border-color .1s ease-in-out,box-shadow .1s ease-in-out;
+}
+
+.navbar .form-control:focus {
+  box-shadow: 0 0 0 1px rgb(255 255 255 / 25%);
+  background-color: #fff;
+  color: #495057;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 12px;
+}
+
+.navbar-nav .dropdown-menu {
+  position: absolute !important;
+  left: -140px;
 }
