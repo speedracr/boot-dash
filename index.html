@@ -5,13 +5,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="styles/content.css">
   <script src="https://code.jquery.com/jquery-3.6.0.min.js">
-  <script src="https://kit.fontawesome.com/876edc1e71.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/876edc1e71.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/feather-icons"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
   <body>
-    <nav class="navbar navbar-dark sticky-top bg-dark p-0 flex-md-nowrap">
+    <nav class="navbar navbar-dark sticky-top p-0 flex-md-nowrap">
       <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
         <img src="janus.png" id="brand-logo">
       </a>
@@ -24,11 +28,11 @@
         <ul class="navbar-nav float-right">
           <li class="nav-item dropdown">
             <a class="nav-link active dropdown-toggle" href="#" id="localeDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              🇫🇷
+              🇫🇷 <span class="locale-name">fr-FR</span>
             </a>
             <div class="dropdown-menu" aria-labelledby="localeDropdown">
-              <a class="dropdown-item" href="#">🇩🇪 de-DE</a>
-              <a class="dropdown-item" href="#">🇮🇹 it-IT</a>
+              <a class="dropdown-item" href="#">🇩🇪 <span class="locale-name">de-DE</span></a>
+              <a class="dropdown-item" href="#">🇮🇹 <span class="locale-name">it-IT</span></a>
             </div>
           </li>
           <li class="nav-item">
@@ -52,20 +56,25 @@
     </nav>
     <div class="container-fluid">
       <div class="row">
-        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+        <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block sidebar collapse">
           <div class="sidebar-sticky pt-3">
             <ul class="nav flex-column">
               <li class="nav-item">
                 <a class="nav-link active" href="#">
-                  <i class="nav-icon-feather" data-feather="home"></i> Dashboard3
+                  <i class="nav-icon-feather" data-feather="home"></i>Start
                 </a>
               </li>
             </ul>
           </div>
         </nav>
+        <div class="col-md-9 col-lg-10 main-window">
+          <div class="hero-header">
+            <h1>Welcome, Homer Simpson</h1>
+          </div>
+        </div>
       </div>
     </div>
-     <script>
+    <script>
       feather.replace()
     </script>
   </body>
