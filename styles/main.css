@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: 600;
   text-transform: uppercase;
 }
@@ -84,9 +84,18 @@ nav.navbar {
 
 nav.sidebar {
   background-color: #313a46;
-  padding-bottom: 10rem;
+  padding-bottom: 60rem;
 }
 
 .locale-name  {
   margin-left: 6px;
 }
+
+li#admin-entry {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  color: #fff;
+  margin-left: 14px;
+  padding-top: 2rem;
+}
+
