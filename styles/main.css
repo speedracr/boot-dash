@@ -75,7 +75,7 @@ a.active:hover {
 
 .navbar-nav .dropdown-menu {
   position: absolute !important;
-  left: -140px;
+  left: -100px;
 }
 
 nav.navbar {
