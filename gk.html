@@ -62,12 +62,12 @@
           <div class="sidebar-sticky pt-3">
             <ul class="nav flex-column">
               <li class="nav-item">
-                <a class="nav-link active" href="#">
+                <a class="nav-link" href="index.html">
                   <i class="nav-icon-feather" data-feather="home"></i>Start
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="gk.html">
+                <a class="nav-link active" href="#">
                   <i class="nav-icon-feather" data-feather="edit-3"></i>Glossary
                 </a>
               </li>
@@ -85,42 +85,58 @@
         <div class="col-md-9 col-lg-10 main-window">
           <div class="row">
             <div class="col-md-12 col-lg12 hero-header">
-              <h1>Welcome, Captain Apollo</h1>
+              <div class="page-title">Search result:</div>
+              <h1 class="search-result-title">
+                <a href="#" class="search-result-title">address</a>. city
+              </h1>
             </div>
           </div>
 
           <section class="main-content">
             <div class="row">
-              <div class="col-md-4">
-                <div class="card">
-                  <div class="card-body">
-                    <h5 class="card-title">Missing translations</h5>
-                    <p class="card-text">The following keys require translation:</p>
-                    <table class="table">
-                      <thead>
-                        <tr>
-                          <th scope="col">Locale</th>
-                          <th scope="col">Key</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row">de-AT</th>
-                          <td>obscure.sub.key</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">de-AT</th>
-                          <td>infrequently.used.key</td>
-                        </tr>
-                        <tr>
-                          <th scope="row">fr-FR</th>
-                          <td>key.someone.forgot</td>
-                        </tr>
-                      </tbody>
-                    </table>
-                    <a href="#" class="btn btn-primary">Fix now</a>
+              <div class="col-md-8">
+                <nav>
+                  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                    <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
+                    <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
+                    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
                   </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
+                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
                 </div>
+                <table class="table table-striped">
+                  <thead>
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">First</th>
+                      <th scope="col">Last</th>
+                      <th scope="col">Handle</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">2</th>
+                      <td>Jacob</td>
+                      <td>Thornton</td>
+                      <td>@fat</td>
+                    </tr>
+                    <tr>
+                      <th scope="row">3</th>
+                      <td>Larry</td>
+                      <td>the Bird</td>
+                      <td>@twitter</td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </section>

@@ -3,5 +3,16 @@
 }
 
 section.main-content {
-  margin-top: 3rem;
+  margin-top: 2rem;
+}
+
+a.search-result-title {
+  color: #141414;
+  text-decoration: underline;
+  padding-right: 6px;
+}
+
+h1.search-result-title {
+  font-size: 1.6rem;
+  text-transform: lowercase;
 }
