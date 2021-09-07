@@ -14,5 +14,13 @@ a.search-result-title {
 
 h1.search-result-title {
   font-size: 1.6rem;
-  text-transform: lowercase;
+  text-transform: none;
+}
+
+td.inactive-locale {
+  color: #f95c7b;
+}
+
+td.missing-locale {
+  color: #fd7e14;
 }

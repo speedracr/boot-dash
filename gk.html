@@ -87,56 +87,75 @@
             <div class="col-md-12 col-lg12 hero-header">
               <div class="page-title">Search result:</div>
               <h1 class="search-result-title">
-                <a href="#" class="search-result-title">address</a>. city
+                <a href="#" class="search-result-title">address</a>.
+                <a href="#" class="search-result-title">customerAlwaysAtAddress</a>. info-text
               </h1>
+              <h2>super-label1</h2>
             </div>
           </div>
 
           <section class="main-content">
             <div class="row">
-              <div class="col-md-8">
+              <div class="col-md-6">
                 <nav>
                   <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                    <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                    <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-                    <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                    <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Single edit</a>
+                    <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Multi-locale edit</a>
                   </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-                  <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
+                  <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                    <table class="table table-striped hero-header">
+                      <thead>
+                        <tr>
+                          <th scope="col">de-DE</th>
+                          <th scope="col">Active</th>
+                        </tr>
+                      </thead>
+                    </table>
+
+                    <div id="editor">
+                      <p>Wenn Sie im angegebenen Zeitraum vor Ort sind, helfen Sie, unnötige Anrufe mit den Speditionslieferanten zu reduzieren und mögliche Verzögerungen in der Lieferkette zu vermeiden. Änderungen können für bereits ausgelöste Bestellungen leider nicht übernommen werden.</p>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                  <table class="table table-striped hero-header">
+                    <thead>
+                      <tr>
+                        <th scope="col">Locale</th>
+                        <th scope="col">Text</th>
+                        <th scope="col">Active</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">de-DE</th>
+                        <td>Wenn Sie im angegebenen Zeitraum vor Ort sind, helfen Sie, unnötige Anrufe mit den Speditionslieferanten zu reduzieren und mögliche Verzögerungen in der Lieferkette zu vermeiden. Änderungen können für bereits ausgelöste Bestellungen leider nicht übernommen werden.</td>
+                        <td class="active-locale"><i class="nav-icon-feather" data-feather="check"></i></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">de-AT</th>
+                        <td>Wenn Sie im angegebenen Zeitraum vor Ort sind, helfen Sie, unnötige Anrufe mit den Speditionslieferanten zu reduzieren und mögliche Verzögerungen in der Lieferkette zu vermeiden. Änderungen können für bereits ausgelöste Bestellungen leider nicht übernommen werden.</td>
+                        <td class="active-locale"><i class="nav-icon-feather" data-feather="check"></i></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">fr-FR</th>
+                        <td>la recette des crêpes était introuvable et ne pouvait être réinventée, même avec beaucoup de talent</td>
+                        <td class="inactive-locale"><i class="nav-icon-feather inactive-locale" data-feather="x-octagon"></i></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">it-IT</th>
+                        <td>[text missing]</td>
+                        <td class="missing-locale"><i class="nav-icon-feather" data-feather="alert-triangle"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <table class="table table-striped">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">First</th>
-                      <th scope="col">Last</th>
-                      <th scope="col">Handle</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th scope="row">1</th>
-                      <td>Mark</td>
-                      <td>Otto</td>
-                      <td>@mdo</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">2</th>
-                      <td>Jacob</td>
-                      <td>Thornton</td>
-                      <td>@fat</td>
-                    </tr>
-                    <tr>
-                      <th scope="row">3</th>
-                      <td>Larry</td>
-                      <td>the Bird</td>
-                      <td>@twitter</td>
-                    </tr>
-                  </tbody>
-                </table>
+                </div>
+                </div>
+
+
+
               </div>
             </div>
           </section>
@@ -146,6 +165,9 @@
     </div>
     <script>
       feather.replace()
+      var quill = new Quill('#editor', {
+        theme: 'snow'
+      });
     </script>
   </body>
 
