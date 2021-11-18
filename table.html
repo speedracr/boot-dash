@@ -5,6 +5,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.1/font/bootstrap-icons.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
@@ -76,6 +77,11 @@
                   <i class="nav-icon-feather" data-feather="list"></i>Glossary keys
                 </a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#">
+                  <i class="bi bi-code-slash"></i>Raw text
+                </a>
+              </li>
               <li id="admin-entry" class="nav-item">
                 Admin
               </li>
@@ -105,7 +111,7 @@
                   <thead>
                     <tr>
                       <th scope="col">Key</th>
-                      <th scope="col">Explanation</th>
+                      <th class="edit-buttons" scope="col">Explanation</th>
                       <th scope="col"></th>
                       <th scope="col">Active</th>
                       <th scope="col">Format</th>
@@ -116,7 +122,14 @@
                   <tbody>
                     <tr>
                       <td>address.isDefaultBilling</td>
-                      <td>Standardrechnungsadresse</td>
+                      <td class="edit-buttons">Standardrechnungsadresse
+                        <div class="button-box">
+                          <a class="edit-button"><i class="bi-pencil-square"></i></a>
+                          <a class="edit-button"><i class="bi-check-circle-fill"></i></a>
+                          <a class="edit-button"><i class="bi-x-octagon"></i></a>
+                          <a class="edit-button"><i class="bi-info-square-fill"></i></a>
+                        </div>
+                      </td>
                       <td>
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editorModal01">
                           Edit
@@ -129,7 +142,7 @@
                     </tr>
                     <tr>
                       <td>address.same_as_billing</td>
-                      <td>Entspricht der Rechnungsadresse</td>
+                      <td class="edit-buttons">Entspricht der Rechnungsadresse</td>
                       <td>
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editorModal02">
                           Edit
@@ -142,7 +155,7 @@
                     </tr>
                     <tr>
                       <td>billie.invoice.reverse.reverse_invoice.note</td>
-                      <td>Bitte beachte: Dieses Dokument stellt keine Gutschrift dar, sondern dient lediglich als Rechnungskorrektur.</td>
+                      <td class="edit-buttons">Bitte beachte: Dieses Dokument stellt keine Gutschrift dar, sondern dient lediglich als Rechnungskorrektur.</td>
                       <td>
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editorModal03">
                           Edit

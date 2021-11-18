@@ -19,6 +19,18 @@ img#brand-logo {
   margin-left: 15px;
 }
 
+input[type="search"]::-webkit-input-placeholder {
+  color: #fff;
+  opacity: 1; /* Firefox */
+}
+
+#top-search {
+  width: 75%;
+  background-color: #788597;
+  border-radius: 5px;
+  color: #fff;
+}
+
 .dropdown-item,
 a.nav-link {
   font-size: 0.9rem;
@@ -38,6 +50,7 @@ a.active:hover {
   margin-right: 8px;
 }
 
+.bi,
 .nav-icon-feather {
   margin: 0 10px 2px 0;
   width: 16px;
