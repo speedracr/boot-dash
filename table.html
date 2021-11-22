@@ -106,6 +106,11 @@
 
           <section class="main-content">
             <div class="row">
+              <div class="col-md-12 add-button">
+                <button type="button" class="btn btn-dark" data-target="#editorModal04" data-toggle="modal">Add glossary key</button>
+              </div>
+            </div>
+            <div class="row">
               <div class="col-md-12">
                 <table class="table table-bordered table-striped">
                   <thead>
@@ -123,12 +128,12 @@
                     <tr>
                       <td>address.isDefaultBilling</td>
                       <td class="edit-buttons">Standardrechnungsadresse
-                        <div class="button-box">
+                        <span class="button-box">
                           <a class="edit-button"><i class="bi-pencil-square"></i></a>
                           <a class="edit-button"><i class="bi-check-circle-fill"></i></a>
                           <a class="edit-button"><i class="bi-x-octagon"></i></a>
                           <a class="edit-button"><i class="bi-info-square-fill"></i></a>
-                        </div>
+                        </span>
                       </td>
                       <td>
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editorModal01">
@@ -142,7 +147,15 @@
                     </tr>
                     <tr>
                       <td>address.same_as_billing</td>
-                      <td class="edit-buttons">Entspricht der Rechnungsadresse</td>
+                      <td class="edit-buttons">Entspricht der Rechnungsadresse
+                                              <span class="button-box">
+                          <a class="edit-button"><i class="bi-pencil-square"></i></a>
+                          <a class="edit-button"><i class="bi-check-circle-fill"></i></a>
+                          <a class="edit-button"><i class="bi-x-octagon"></i></a>
+                          <a class="edit-button"><i class="bi-info-square-fill"></i></a>
+                        </span>
+                        </td>
+
                       <td>
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editorModal02">
                           Edit
@@ -155,7 +168,14 @@
                     </tr>
                     <tr>
                       <td>billie.invoice.reverse.reverse_invoice.note</td>
-                      <td class="edit-buttons">Bitte beachte: Dieses Dokument stellt keine Gutschrift dar, sondern dient lediglich als Rechnungskorrektur.</td>
+                      <td class="edit-buttons">Bitte beachte: Dieses Dokument stellt keine Gutschrift dar, sondern dient lediglich als Rechnungskorrektur.
+                                              <span class="button-box">
+                          <a class="edit-button"><i class="bi-pencil-square"></i></a>
+                          <a class="edit-button"><i class="bi-check-circle-fill"></i></a>
+                          <a class="edit-button"><i class="bi-x-octagon"></i></a>
+                          <a class="edit-button"><i class="bi-info-square-fill"></i></a>
+                        </span>
+                        </td>
                       <td>
                         <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#editorModal03">
                           Edit
@@ -180,14 +200,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <table class="table table-striped hero-header">
-                          <thead>
-                            <tr>
-                              <th scope="col">de-DE</th>
-                              <th scope="col">Active</th>
-                            </tr>
-                          </thead>
-                        </table>
+                        <h6>Locale: fr-FR 🇫🇷</h6>
 
                         <div id="editor">
                           <p>Standardrechnungsadresse</p>
@@ -195,6 +208,7 @@
 
                       </div>
                       <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark btn-sm" data-task="deactivate">Deactivate</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard changes</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Save and close</button>
                       </div>
@@ -214,14 +228,7 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <table class="table table-striped hero-header">
-                          <thead>
-                            <tr>
-                              <th scope="col">de-DE</th>
-                              <th scope="col">Active</th>
-                            </tr>
-                          </thead>
-                        </table>
+                        <h6>Locale: fr-FR 🇫🇷</h6>
 
                         <div id="editor02">
                           <p>Entspricht der Rechnungsadresse</p>
@@ -229,6 +236,7 @@
 
                       </div>
                       <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark btn-sm" data-task="deactivate">Deactivate</button>
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard changes</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Save and close</button>
                       </div>
@@ -248,17 +256,38 @@
                         </button>
                       </div>
                       <div class="modal-body">
-                        <table class="table table-striped hero-header">
-                          <thead>
-                            <tr>
-                              <th scope="col">de-DE</th>
-                              <th scope="col">Active</th>
-                            </tr>
-                          </thead>
-                        </table>
+                        <h6>Locale: fr-FR 🇫🇷</h6>
 
                         <div id="editor03">
                           <p>Bitte beachte: Dieses Dokument stellt keine Gutschrift dar, sondern dient lediglich als Rechnungskorrektur.</p>
+                        </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark btn-sm" data-task="deactivate">Deactivate</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard changes</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save and close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- -->
+
+                <!-- modal 04 -->
+                <div class="modal fade" id="editorModal04" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <input type="text" placeholder="Key"></input>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h6>Locale: fr-FR 🇫🇷</h6>
+
+                        <div id="editor04">
+                          <p></p>
                         </div>
 
                       </div>
@@ -270,7 +299,6 @@
                   </div>
                 </div>
                 <!-- -->
-
               </div>
             </div>
           </section>
@@ -287,6 +315,9 @@
         theme: 'snow'
       });
       var quill = new Quill('#editor03', {
+        theme: 'snow'
+      });
+      var quill = new Quill('#editor04', {
         theme: 'snow'
       });
     </script>
