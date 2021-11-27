@@ -11,8 +11,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/main.css">
   <link rel="stylesheet" href="styles/content.css">
-  <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 
+  <script src="https://cdn.tiny.cloud/1/vr3qt7b4xr5d0p42lrcygqp0c5sp0gna7zux0v36pupl9st2/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js">
     <script src="https://kit.fontawesome.com/876edc1e71.js" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/feather-icons"></script>
@@ -20,6 +20,8 @@
   <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
   <body>
+    <!-- fix Bootstrap / TinyMCE focus blocking bug -->
+
     <nav class="navbar navbar-dark sticky-top p-0 flex-md-nowrap">
       <a class="navbar-brand col-md-3 col-lg-2 mr-0 px-3" href="#">
         <img src="janus.png" id="brand-logo">
@@ -110,6 +112,7 @@
             <div class="row">
               <div class="col-md-12 add-button">
                 <button type="button" class="btn btn-dark" data-target="#editorModal04" data-toggle="modal">New glossary key</button>
+                <button type="button" class="btn btn-outline-dark" data-target="#editorModal05" data-toggle="modal">TinyMCE</button>
               </div>
             </div>
             <div class="row">
@@ -301,6 +304,38 @@
                   </div>
                 </div>
                 <!-- -->
+
+                <!-- modal 05 -->
+                <div class="modal fade" id="editorModal05" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="staticBackdropLabel">billie.invoice.reverse.reverse_invoice.note</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h6>Locale: fr-FR 🇫🇷</h6>
+
+                        <div id="editor05">
+                          <h2>New key</h2>
+                          <strong>Versandkostenfrei ab 50€ brutto</strong> <br> Nur noch <mark>%amountToFreeShipping%</mark>, dann versenden wir deine Bestellung kostenlos.
+                          <h2>New key</h2>
+                          Mit Gutscheincode <strong class="txt--yellow">%couponCodeText%</strong> 10€ Rabatt<br>ab 100€ Bestellwert.
+                        </div>
+
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-outline-dark btn-sm" data-task="deactivate">Deactivate</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Discard changes</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Save and close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- -->
+
               </div>
             </div>
           </section>
@@ -309,6 +344,12 @@
       </div>
     </div>
     <script>
+// Prevent Bootstrap dialog from blocking focusin
+    $(document).on('focusin', function(e) {
+      if ($(e.target).closest(".tox-tinymce, .tox-tinymce-aux, .moxman-window, .tam-assetmanager-root").length) {
+        e.stopImmediatePropagation();
+      }
+    });
       feather.replace()
       var quill = new Quill('#editor', {
         theme: 'snow'
@@ -321,6 +362,12 @@
       });
       var quill = new Quill('#editor04', {
         theme: 'snow'
+      });
+      tinymce.init({
+        selector: '#editor05',
+        plugins: 'code',
+        toolbar: 'undo redo | bold italic | code',
+        menubar: 'tools'
       });
     </script>
   </body>
