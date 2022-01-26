@@ -97,27 +97,27 @@
             </ul>
           </div>
         </nav>
+
         <div class="col-md-9 col-lg-10 main-window">
           <div class="row">
             <div class="col-md-12 col-lg12 hero-header">
-              <div class="page-title">Search result:</div>
-              <h1 class="search-result-title">
-                <a href="#" class="search-result-title">address</a>.
-                <a href="#" class="search-result-title">customerAlwaysAtAddress</a>. info-text
-              </h1>
+            <h5>
+              Search results for: <strong>address</strong>
+            </h5>
             </div>
           </div>
 
           <section class="main-content">
-            <div class="row">
-              <div class="col-md-12 add-button">
-                <button type="button" class="btn btn-dark" data-target="#editorModal04" data-toggle="modal">Create glossary key</button>
-                <button type="button" class="btn btn-outline-dark" data-target="#editorModal05" data-toggle="modal">TinyMCE</button>
+            <nav>
+              <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-link active" id="nav-explanations-tab" data-toggle="tab" href="#nav-explanations" role="tab" aria-controls="nav-explanations" aria-selected="true"><h5>Explanations</h5></a>
+                <a class="nav-link" id="nav-keys-tab" data-toggle="tab" href="#nav-keys" role="tab" aria-controls="nav-keys" aria-selected="false"><h5>Keys</h5></a>
               </div>
-            </div>
-            <div class="row">
-              <div class="col-md-12">
-                <table class="table table-bordered table-striped">
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="nav-explanations" role="tabpanel" aria-labelledby="nav-home-tab">
+            <!-- explanations tab -->
+                            <table class="table table-bordered table-striped">
                   <thead>
                     <tr>
                       <th scope="col">Key</th>
@@ -193,6 +193,20 @@
                     </tr>
                   </tbody>
                 </table>
+
+              </div>
+              <!-- end -->
+
+              <div class="tab-pane fade" id="nav-keys" role="tabpanel" aria-labelledby="nav-profile-tab">
+            <!-- keys tab -->
+                <div class="empty-results">
+                  <h5>Sorry, we could not find anything!</h5>
+                  <p>Please try a different term, adjust the spelling or check for typos.</p>
+                </div>
+              </div>
+              <!-- end -->
+
+            </div>
 
                 <!-- modal 01 -->
                 <div class="modal fade" id="editorModal01" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

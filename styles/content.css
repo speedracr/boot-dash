@@ -72,3 +72,7 @@ td.inactive-locale {
 td.missing-locale {
   color: #fd7e14;
 }
+
+.empty-results {
+  margin: 2rem 0
+}
